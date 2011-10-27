@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HAQ Demo</title>
+    <!-- CSS Assetts -->
+    <link type="text/css" href="haq_assets/haq.css" rel="stylesheet" />
+
+    <!-- JS Assetts -->
+    <script language="javascript" type="text/javascript" src="inc/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript" src="inc/naba_utils.js"></script>
+
+    <script language="javascript" type="text/javascript" src="haq_assets/haq.js"></script>    
+</head>
+
+<body>
+<form class="instrument">
+<h1>Test Questionnaire</h1>
+<div class="item-group">
+    <h2>Patient information</h2>
+    <div class="item" id="item_p1">
+        <div class="answer-holder">
+            <label>Name:</label><input type="text" name="item_p1"/>
+        </div>
+    </div>
+     <div class="item" id="item_p2">
+        <div class="answer-holder">
+            <label>Date of birth:</label><input type="text" name="item_p2"/>
+        </div>
+    </div>
+     <div class="item" id="item_p3">
+        <div class="answer-holder">
+            <label>Weight:</label><input type="text" name="item_p3"/>
+        </div>
+    </div>
+    <div class="item" id="item_p4">
+        <div class="answer-holder">
+            <label>Language:</label><input type="text" name="item_p4"/>
+        </div>
+    </div>
+    <div class="item" id="item_p5">
+        <div class="answer-holder">
+            <label>Gender:</label>
+                <label class="inline">Male</label><input type="radio" name="item_p5" value="male"/>
+                <label class="inline">Female</label><input type="radio" name="item_p5" value="female"/>
+            
+        </div>
+    </div>
+    
+    
+</div>
+
+<div class="item-group">
+    <h2>Admission and whatever needs</h2>
+    <div class="item" id="item_1">
+        <div class="question">
+            <span class="qn">1.</span>After Day Case Surgery you will not be allowed to drive yourself home or be alone on the first night.  
+            Will you need assistance with arranging transport and/or overnight care?        
+        </div>
+        <div class="answer-holder">
+            <label class="inline">No</label><input type="radio" name="item_1" value="no"/>
+            <label class="inline">Yes</label><input type="radio" name="item_1" value="yes"/>
+        </div>
+        <div class="item sub" id="item_1_sub" guardingItem="item_1" showIfValueIs="yes">
+            <div class="answer-holder">
+                <textarea emptyValue="Please describe here" name="item_1_sub"></textarea>
+            </div>    
+        </div>
+    </div>
+
+    <div class="item" id="item_2">
+        <div class="question"><span class="qn">2.</span>Do you live alone, in a hostel, or nursing home?</div>
+        <div class="answer-holder">
+            <label class="inline">No</label><input type="radio" name="item_2" value="no"/>
+            <label class="inline">Yes</label><input type="radio" name="item_2" value="yes"/>
+        </div>
+        <div class="item sub" id="item_2_sub" guardingItem="item_2" showIfValueIs="yes">
+            <div class="answer-holder">
+                <textarea emptyValue="Please describe here" name="item_2_sub"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="item" id="item_3">
+        <div class="question"><span class="qn">3.</span>If you are the primary carer for someone, do you need help to organise their care while you recover?</div>
+        <div class="answer-holder">
+            <label class="inline"> No</label><input type="radio" name="item_3" value="no"/>
+            <label class="inline">Yes</label><input type="radio" name="item_3" value="yes"/>
+        </div>
+        <div class="item sub" id="item_3_sub" guardingItem="item_3" showIfValueIs="yes">
+            <div class="answer-holder">
+                <textarea emptyValue="Please describe here" name="item_3_sub"></textarea>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</form>
+
+</div>
+</body>
+
+</html>
